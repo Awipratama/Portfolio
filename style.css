@@ -365,12 +365,10 @@ nav a:hover {
 
 /* Halaman Hobby */
 
-
-
 /* Halaman Contact */
 
-@import url('https://fonts.googleapis.com/css?family=Poppins'); */ 
-.contact-left {
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+*/ .contact-left {
   flex-basis: 35%;
 }
 .contact-right {
