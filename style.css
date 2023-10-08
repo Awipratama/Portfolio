@@ -19,13 +19,13 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20rem;
+  gap: 25rem;
   width: 100%;
   height: 100px;
 }
 nav .main-text {
   font-size: 1.8rem;
-  font-family: "Poppins";
+  font-family: 'Young Serif', serif;
   background: -webkit-linear-gradient(120deg, hsl(318, 94%, 61%), hsl(239, 69%, 51%));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -35,10 +35,11 @@ ul {
 }
 nav ul {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 0 35px;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  margin-right: 10px;
 }
 nav a {
   background: -webkit-linear-gradient(120deg, hsl(318, 94%, 61%), hsl(239, 69%, 51%));
@@ -47,8 +48,8 @@ nav a {
   text-decoration: none;
 }
 nav a:hover {
-  border-bottom: 3px solid hsl(239, 69%, 51%);
-  transition: 1s;
+  border-bottom: 4px solid hsl(239, 69%, 51%);
+  transition: 0.3s;
 }
 .content {
   display: flex;
@@ -315,7 +316,7 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-wrap: wrap;
   padding: -10px 10px;
   text-align: center;
   font-size: 14px;
@@ -337,16 +338,16 @@ nav a:hover {
   font-weight: 500;
   font-size: 30px;
   font-family: monospace;
-  margin-bottom: 20px;
   color: aliceblue;
+  margin-top: 60px;
 }
 .layer p {
   color: aliceblue;
   font-weight: 400;
-  max-width: 310px;
+  max-width: 350px;
+  margin-top: -30px;
 }
 .layer a {
-  margin-top: 20px;
   color: #e31b59;
   text-decoration: none;
   font-size: 18px;
@@ -451,4 +452,87 @@ form .btn-btn2:hover {
 }
 .copyright i {
   color: hsl(318, 94%, 61%);
+}
+
+/* Halaman Responsive */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 16px;
+  justify-content: space-between;
+  margin-right: 50px;
+  position: relative;
+}
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 17px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  transition: all 0.5s;
+}
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+.menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-4px, -4px);
+  background-color: #fff;
+}
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+.menu-toggle input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg);
+  background-color: #fff;
+}
+.menu-toggle input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+  opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    width: 71.5%;
+    font-size: 15px;
+  }
+  nav .main-text {
+    margin-right: -45.5%;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80%;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #161515;
+    flex-direction: column;
+    z-index: -1;
+    transform: translateX(100%);
+    transition: all 1s;
+  }
+  nav ul.slide {
+    transform: translateX(0);
+  }
+  nav .main-text {
+    margin-left: -45%;
+    margin-top: 30px;
+    font-size: 30px;
+  }
+  .menu-toggle {
+    display: flex;
+    right: 0px;
+  }
 }
