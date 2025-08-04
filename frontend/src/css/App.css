@@ -1,0 +1,55 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #99bc85;
+  background: linear-gradient(
+    180deg,
+    rgba(153, 188, 133, 1) 0%,
+    rgba(228, 239, 231, 1) 50%,
+    rgba(253, 250, 246, 1) 100%
+  );
+}
+
+.main-profile-content {
+  background: #FAF1E6;
+}
+
+.nav-container {
+  background: #FAF1E6;
+}
+
+.info-section {
+    background: #6E6E6E;
+}
+
+.about-child {
+    background: #FFEBD1;
+}
+
+.about-child2 {
+    background: #F2F7FC;
+}
+
+.award-caraousel-wrapper {
+  height: 100px; /* Atur tinggi container */
+  overflow: hidden;
+  position: relative;
+}
+
+.award-track {
+  display: flex;
+  flex-direction: column;
+  animation: scroll-up 10s linear infinite;
+}
+
+.award-caraousel-wrapper:hover .award-track {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
