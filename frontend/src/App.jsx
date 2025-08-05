@@ -1,18 +1,14 @@
-import Navigation from "./components/Navigation";
-import MainBody from "./components/MainBody";
-import MainProfile from "./components/MainProfile";
-
-import "./css/App.css"
+import { Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import MainLayout from "./pages/MainLayout";
+import React from "react";
 
 function App() {
   return (
-    <>
-      <Navigation />
-      <div className="container-main flex px-30 pt-32 pb-16 gap-8">
-        <MainProfile />
-        <MainBody />
-      </div>
-    </>
+    <Routes>
+      <Route path="/" element={<MainLayout />} />
+      <Route path="/login" element={<Login />} />
+    </Routes>
   );
 }
 
