@@ -1,6 +1,23 @@
 import React from "react";
+import axios from "axios";
+import { useState } from "react";
 
 function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post("http://localhost:8000/api/login", { email, password }, {withCredentials: true});
+
+      window.location.href = response.data.redirectUrl;
+    } catch (error) {
+      console.error("Login failed:", error);
+      alert("Login failed. Please check your credentials.");
+    }
+  };
+
   return (
     <div class="bg-sky-100 flex justify-center items-center h-screen">
       <div class="w-1/2 h-screen hidden lg:block">
@@ -12,15 +29,17 @@ function Login() {
       </div>
       <div class="lg:p-36 md:p-52 sm:20 p-8 w-full lg:w-1/2">
         <h1 class="text-2xl font-semibold mb-4">Login</h1>
-        <form action="#" method="POST">
+        <form onSubmit={handleLogin} method="POST">
           <div class="mb-4 bg-sky-100">
-            <label for="username" class="block text-gray-600">
-              Username
+            <label for="email" class="block text-gray-600">
+              Email
             </label>
             <input
-              type="text"
-              id="username"
-              name="username"
+              type="email"
+              id="email"
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500"
               autocomplete="off"
             />
@@ -33,6 +52,8 @@ function Login() {
               type="password"
               id="password"
               name="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500"
               autocomplete="off"
             />
