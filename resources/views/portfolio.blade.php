@@ -14,24 +14,24 @@
                 </p>
             </div>
             <div class="award py-4 px-6 bg-[#FAF1E6] rounded-xl shadow-lg">
-                <h2 class="text-[18px] font-semibold pb-4">
+                <h2 class="text-[16px] font-semibold pb-4">
                     Awards & Certification
                 </h2>
-                <div class="award-caraousel-wrapper px-2">
+                <div class="award-caraousel-wrapper">
                     <div class="award-track">
-                        {[...award, ...award].map((item, index) => (
-                        <div class="award-child-1 flex gap-2">
-                            <FaDotCircle class="w-2 pt-1" />
-                            <div class="text-award flex flex-col">
-                                <p class="text-[14px] flex items-center gap-2">
-                                    {item.title}
-                                </p>
-                                <span class="text-[12px]">
-                                    {item.sub}
-                                </span>
+                        @foreach(array_merge($award, $award) as $item)
+                            <div class="award-child-1 flex gap-2">
+                                <i class="bi bi-dot w-2 pt-1"></i>
+                                <div class="text-award flex flex-col">
+                                    <p class="text-[14px] flex items-center gap-2">
+                                        {{ $item['title'] }}
+                                    </p>
+                                    <span class="text-[12px]">
+                                        {{ $item['year'] }}
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                        ))}
+                        @endforeach
                     </div>
                 </div>
             </div>

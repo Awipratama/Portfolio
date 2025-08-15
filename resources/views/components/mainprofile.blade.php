@@ -10,25 +10,25 @@
         </div>
         <div class="social-media flex gap-6 pb-2">
             <a href="#"
-                class="facebook text-[20px] p-4 bg-white rounded-lg shadow-md hover:-translate-y-1 transition-all duration-300">
+                class="facebook text-[20px] py-2 px-4 bg-white rounded-lg shadow-md hover:-translate-y-1 transition-all duration-300">
                 <i class="bi bi-facebook"></i>
             </a>
             <a href="#"
-                class="linkedin text-[20px] p-4 bg-white rounded-lg shadow-md hover:-translate-y-1 transition-all duration-300">
-                <FaLinkedin />
+                class="linkedin text-[20px] py-2 px-4 bg-white rounded-lg shadow-md hover:-translate-y-1 transition-all duration-300">
+                <i class="bi bi-linkedin"></i>
             </a>
             <a href="#"
-                class="instagram text-[20px] p-4 bg-white rounded-lg shadow-md hover:-translate-y-1 transition-all duration-300">
-                <FaInstagram />
+                class="instagram text-[20px] py-2 px-4 bg-white rounded-lg shadow-md hover:-translate-y-1 transition-all duration-300">
+                <i class="bi bi-instagram"></i>
             </a>
             <a href="#"
-                class="github text-[20px] p-4 bg-white rounded-lg shadow-md hover:-translate-y-1 transition-all duration-300">
-                <FaGithub />
+                class="github text-[20px] py-2 px-4 bg-white rounded-lg shadow-md hover:-translate-y-1 transition-all duration-300">
+                <i class="bi bi-github"></i>
             </a>
         </div>
-        <div class="info-section flex flex-col p-6 gap-6 rounded-lg">
+        <div class="info-section flex flex-col p-6 gap-2 rounded-lg">
             <div class="items phone flex items-center gap-2 text-white">
-                <FaPhoneSquareAlt class="text-[24px]" />
+                <i class="bi bi-telephone"></i>
                 <div class="phone-child text-[14px]">
                     <a href="#" class="hover:underline">
                         +62 812-3714-2927
@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div class="items email flex items-center gap-2 text-white">
-                <HiOutlineMailOpen class="text-[24px]" />
+                <i class="bi bi-envelope-at"></i>
                 <div class="email-child text-[14px]">
                     <a href="#" class="hover:underline">
                         awipratama05122006@gmail.com
@@ -44,7 +44,7 @@
                 </div>
             </div>
             <div class="items location flex items-center gap-2 text-white">
-                <FaLocationDot class="text-[24px]" />
+                <i class="bi bi-pin-map"></i>
                 <div class="location-child text-[14px]">
                     <a href="#" class="hover:underline">
                         Jln. Ngurah Beng, Bebengan, Desa Adat Tangeb
