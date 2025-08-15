@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #99bc85;
+    background: linear-gradient(
+        180deg,
+        rgba(153, 188, 133, 1) 0%,
+        rgba(228, 239, 231, 1) 50%,
+        rgba(253, 250, 246, 1) 100%
+    );
+    /* overflow-x: hidden; */
+}
+
+.main-profile-content {
+    background: #faf1e6;
+}
+
+.nav-container {
+    width: 100%;
+}
+
+.container-main {
+    padding-inline: 4.6rem;
+}
+
+.nav-child {
+    background: #faf1e6;
+}
+
+.info-section {
+    background: #6e6e6e;
+}
+
+.about-me-card {
+    width: 70%;
+}
+
+.about-child {
+    background: #ffebd1;
+}
+
+.about-child2 {
+    background: #f2f7fc;
+}
+
+.sub-title-body {
+    background: #72b3cc;
+    background: linear-gradient(
+        90deg,
+        rgba(114, 179, 204, 1) 0%,
+        rgba(111, 222, 157, 1) 50%,
+        rgba(219, 209, 114, 1) 100%
+    );
+}
+
+.award-caraousel-wrapper {
+    height: 115px; /* Atur tinggi container */
+    overflow: hidden;
+    position: relative;
+}
+
+.award-track {
+    display: flex;
+    flex-direction: column;
+    animation: scroll-up 10s linear infinite;
+}
+
+.award-caraousel-wrapper:hover .award-track {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-up {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
