@@ -29,9 +29,17 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="./index.html" class="nav-link active">
+                            <a href="{{ url('/dashboardv1') }}" class="nav-link active">
                                 <i class="nav-icon bi bi-circle"></i>
                                 <p>Dashboard v1</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ url('/dashboardv3') }}" class="nav-link">
+                                <i class="nav-icon bi bi-circle"></i>
+                                <p>Dashboard v3</p>
                             </a>
                         </li>
                     </ul>
