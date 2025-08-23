@@ -1,4 +1,4 @@
-<x-layout.app>
+<x-layout.app3>
     <main class="app-main">
         <!--begin::App Content Header-->
         <div class="app-content-header">
@@ -270,4 +270,4 @@
         </div>
         <!--end::App Content-->
     </main>
-</x-layout.app>
+</x-layout.app3>

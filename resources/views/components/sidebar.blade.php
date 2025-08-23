@@ -29,7 +29,8 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ url('/dashboardv1') }}" class="nav-link active">
+                            <a href="{{ url('/dashboardv1') }}" class="nav-link
+                            {{ request()->is('dashboardv1') ? 'active' : '' }}">
                                 <i class="nav-icon bi bi-circle"></i>
                                 <p>Dashboard v1</p>
                             </a>
@@ -37,18 +38,13 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ url('/dashboardv3') }}" class="nav-link">
+                            <a href="{{ url('/dashboardv3') }}" class="nav-link
+                            {{ request()->is('dashboardv3') ? 'active' : '' }}">
                                 <i class="nav-icon bi bi-circle"></i>
                                 <p>Dashboard v3</p>
                             </a>
                         </li>
                     </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="./generate/theme.html" class="nav-link">
-                        <i class="nav-icon bi bi-palette"></i>
-                        <p>Theme Generate</p>
-                    </a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
