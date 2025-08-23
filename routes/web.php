@@ -11,3 +11,6 @@ Route::get('/dashboardv1', function () {
 Route::get('/dashboardv3', function () {
     return view('dashboardv3');
 });
+Route::get('/login', function () {
+    return view('login');
+});
