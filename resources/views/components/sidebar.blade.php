@@ -29,7 +29,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ url('/dashboardv1') }}" class="nav-link
+                            <a href="{{ url('/admin/dashboardv1') }}" class="nav-link
                             {{ request()->is('dashboardv1') ? 'active' : '' }}">
                                 <i class="nav-icon bi bi-circle"></i>
                                 <p>Dashboard v1</p>
@@ -38,10 +38,27 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ url('/dashboardv3') }}" class="nav-link
+                            <a href="{{ url('/admin/dashboardv3') }}" class="nav-link
                             {{ request()->is('dashboardv3') ? 'active' : '' }}">
                                 <i class="nav-icon bi bi-circle"></i>
                                 <p>Dashboard v3</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item menu-open">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon bi bi-box-seam-fill"></i>
+                        <p>
+                            HomePage
+                            <i class="nav-arrow bi bi-chevron-right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ url('/admin/awards') }}" class="nav-link {{ request()->is('awards') ? 'active' : '' }}">
+                                <i class="nav-icon bi bi-circle"></i>
+                                <p>Awards</p>
                             </a>
                         </li>
                     </ul>

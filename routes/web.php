@@ -11,6 +11,8 @@ Route::post('/login', [AuthController::class, 'login'])->name('login.post');
 
 Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::get('/admin/dashboardv1', function () {
-    return view('dashboardv1');
-})->middleware('auth')->name('dashboardv1');
+Route::middleware('auth')->prefix('admin')->group(function () {
+    Route::view('/dashboardv1', 'dashboardv1')->name('dashboardv1');
+    Route::view('/dashboardv3', 'dashboardv3')->name('dashboardv3');
+    Route::view('/awards', 'awards')->name('awards');
+});
