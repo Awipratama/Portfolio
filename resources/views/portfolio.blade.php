@@ -13,15 +13,15 @@
                     competitions and organizational activities.
                 </p>
             </div>
-            <div class="award py-4 px-6 bg-[#FAF1E6] rounded-xl shadow-lg">
+            <div class="award py-4 px-4 bg-[#FAF1E6] rounded-xl shadow-lg">
                 <h2 class="text-[16px] font-semibold pb-4">
                     Awards & Certification
                 </h2>
                 <div class="award-caraousel-wrapper">
-                    <div class="award-track">
+                    <div class="award-track gap-2">
                         @foreach (array_merge($award, $award) as $item)
                             <div class="award-child-1 flex gap-2">
-                                <i class="bi bi-dot w-2 pt-1"></i>
+                                <i class="bi bi-dot w-2 pt-2"></i>
                                 <div class="text-award flex flex-col">
                                     <p class="text-[14px] flex items-center gap-2">
                                         {{ $item['title'] }}
@@ -102,33 +102,3 @@
             </div>
         </div>
 </x-layout.app2>
-
-<!-- Init Swiper -->
-<script type="module">
-    import Swiper from 'swiper';
-    import {
-        Navigation,
-        Pagination
-    } from 'swiper/modules';
-
-    new Swiper('.mySwiper', {
-        modules: [Navigation, Pagination],
-        slidesPerView: 1,
-        spaceBetween: 20,
-        navigation: true,
-        pagination: {
-            clickable: true
-        },
-        breakpoints: {
-            640: {
-                slidesPerView: 1
-            },
-            768: {
-                slidesPerView: 2
-            },
-            1024: {
-                slidesPerView: 3
-            },
-        }
-    });
-</script>

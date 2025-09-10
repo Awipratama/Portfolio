@@ -12,16 +12,16 @@ class PortfolioController extends Controller
     {
         $award = [
             [
-                'title' => 'Best Developer',
-                'year' => 2022,
+                'title' => '2nd Champion Web Design',
+                'year' => 2023,
             ],
             [
-                'title' => 'Employee of the Month',
-                'year' => 2021,
+                'title' => '3rd Champion Contest of Wits',
+                'year' => 2024,
             ],
             [
-                'title' => 'Innovation Award',
-                'year' => 2020,
+                'title' => 'Skensa Scout Members',
+                'year' => 2024,
             ]
         ];
 
