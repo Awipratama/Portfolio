@@ -25,7 +25,7 @@ body {
 }
 
 .container-main {
-    padding-inline: 4.6rem;
+    padding-inline: 9.6rem;
 }
 
 .nav-child {
@@ -37,7 +37,7 @@ body {
 }
 
 .about-me-card {
-    width: 70%;
+    width: 73%;
 }
 
 .about-child {
@@ -49,6 +49,16 @@ body {
 }
 
 .sub-title-body {
+    background: #72b3cc;
+    background: linear-gradient(
+        90deg,
+        rgba(114, 179, 204, 1) 0%,
+        rgba(111, 222, 157, 1) 50%,
+        rgba(219, 209, 114, 1) 100%
+    );
+}
+
+.portfolio-project {
     background: #72b3cc;
     background: linear-gradient(
         90deg,

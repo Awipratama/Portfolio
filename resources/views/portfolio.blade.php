@@ -1,7 +1,7 @@
 <x-layout.app2>
     <div class="main-body-content">
-        <div class="content flex gap-6">
-            <div class="about-me-card shadow-lg py-4 px-6 w-full rounded-xl bg-[#FAF1E6]">
+        <div class="content flex justify-between">
+            <div class="about-me-card shadow-lg py-4 px-6 rounded-xl bg-[#f2f7fc]">
                 <h2 class="text-[24px] font-semibold">About Me</h2>
                 <p class="body-desc pb-2">
                     I am a graduate of SMKN 1 Denpasar with a major in
@@ -75,6 +75,9 @@
                     </p>
                 </div>
             </div>
+        </div>
+        <div class="portfolio-project mt-6 py-4 px-6 rounded-xl">
+            <h2>My Recent Projects</h2>
         </div>
     </div>
 </x-layout.app2>

@@ -26,10 +26,10 @@
                 <i class="bi bi-github"></i>
             </a>
         </div>
-        <div class="info-section flex flex-col p-6 gap-2 rounded-lg">
+        <div class="info-section flex flex-col p-6 gap-4 rounded-lg">
             <div class="items phone flex items-center gap-2 text-white">
                 <i class="bi bi-telephone"></i>
-                <div class="phone-child text-[14px]">
+                <div class="phone-child text-[16px]">
                     <a href="#" class="hover:underline">
                         +62 812-3714-2927
                     </a>
@@ -37,7 +37,7 @@
             </div>
             <div class="items email flex items-center gap-2 text-white">
                 <i class="bi bi-envelope-at"></i>
-                <div class="email-child text-[14px]">
+                <div class="email-child text-[16px]">
                     <a href="#" class="hover:underline">
                         awipratama05122006@gmail.com
                     </a>
@@ -45,7 +45,7 @@
             </div>
             <div class="items location flex items-center gap-2 text-white">
                 <i class="bi bi-pin-map"></i>
-                <div class="location-child text-[14px]">
+                <div class="location-child text-[16px]">
                     <a href="#" class="hover:underline">
                         Jln. Ngurah Beng, Bebengan, Desa Adat Tangeb
                     </a>
