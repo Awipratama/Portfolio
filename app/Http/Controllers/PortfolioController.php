@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Project;
 
-class AwardController extends Controller
+class PortfolioController extends Controller
 {
     // Array buat loopingan Award
     public function index()
@@ -24,6 +25,13 @@ class AwardController extends Controller
             ]
         ];
 
-        return view('portfolio', compact('award'));
+        $projects = $this->projects();
+
+        return view('portfolio', compact('award', 'projects'));
+    }
+
+    public function projects()
+    {
+        return Project::latest()->get();
     }
 }

@@ -19,7 +19,7 @@
                 </h2>
                 <div class="award-caraousel-wrapper">
                     <div class="award-track">
-                        @foreach(array_merge($award, $award) as $item)
+                        @foreach (array_merge($award, $award) as $item)
                             <div class="award-child-1 flex gap-2">
                                 <i class="bi bi-dot w-2 pt-1"></i>
                                 <div class="text-award flex flex-col">
@@ -78,6 +78,57 @@
         </div>
         <div class="portfolio-project mt-6 py-4 px-6 rounded-xl flex flex-col items-center">
             <h2 class="font-semibold text-[24px]">My Recent Projects</h2>
+            <!-- Swiper Container -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    @foreach ($projects as $project)
+                        <div class="swiper-slide">
+                            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                                <img src="{{ asset($project->thumbnail) }}" alt="{{ $project->title }}"
+                                    class="w-full h-60 object-cover">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold">{{ $project->title }}</h3>
+                                    <p class="text-gray-600 text-sm">{{ $project->description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+
+                <!-- Navigation & Pagination -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
-    </div>
 </x-layout.app2>
+
+<!-- Init Swiper -->
+<script type="module">
+    import Swiper from 'swiper';
+    import {
+        Navigation,
+        Pagination
+    } from 'swiper/modules';
+
+    new Swiper('.mySwiper', {
+        modules: [Navigation, Pagination],
+        slidesPerView: 1,
+        spaceBetween: 20,
+        navigation: true,
+        pagination: {
+            clickable: true
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 1
+            },
+            768: {
+                slidesPerView: 2
+            },
+            1024: {
+                slidesPerView: 3
+            },
+        }
+    });
+</script>
