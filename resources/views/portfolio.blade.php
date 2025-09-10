@@ -2,7 +2,7 @@
     <div class="main-body-content">
         <div class="content flex justify-between">
             <div class="about-me-card shadow-lg py-4 px-6 rounded-xl bg-[#f2f7fc]">
-                <h2 class="text-[24px] font-semibold">About Me</h2>
+                <h2 class="text-[20px] font-semibold">About Me</h2>
                 <p class="body-desc pb-2">
                     I am a graduate of SMKN 1 Denpasar with a major in
                     Software Engineering. I have a deep interest in the
@@ -37,7 +37,7 @@
             </div>
         </div>
         <div class="sub-title-body bg-[#FDFAF6] mt-6 p-4 rounded-xl shadow-lg">
-            <h2 class="font-semibold text-[20px] uppercase text-center">
+            <h2 class="font-semibold text-[22px] uppercase text-center">
                 My Current Skills
             </h2>
         </div>
@@ -45,7 +45,7 @@
             <div class="about-content grid grid-cols-2 gap-4">
                 <div class="about-child py-4 px-6 rounded-xl">
                     <div class="heading-about-child flex items-center gap-2">
-                        <SiDailydotdev class="text-[24px] mb-2" />
+                        <SiDailydotdev class="text-[20px] mb-2" />
                         <h3 class="font-semibold mb-2">
                             FrontEnd Developer
                         </h3>
@@ -62,7 +62,7 @@
                 </div>
                 <div class="about-child2 py-4 px-6 rounded-xl">
                     <div class="heading-about-child flex items-center gap-2">
-                        <SiDailydotdev class="text-[24px] mb-2" />
+                        <SiDailydotdev class="text-[20px] mb-2" />
                         <h3 class="font-semibold mb-2">
                             IoT Developer
                         </h3>
@@ -76,8 +76,8 @@
                 </div>
             </div>
         </div>
-        <div class="portfolio-project mt-6 py-4 px-6 rounded-xl">
-            <h2>My Recent Projects</h2>
+        <div class="portfolio-project mt-6 py-4 px-6 rounded-xl flex flex-col items-center">
+            <h2 class="font-semibold text-[24px]">My Recent Projects</h2>
         </div>
     </div>
 </x-layout.app2>
