@@ -19,7 +19,7 @@
                 </h2>
                 <div class="award-caraousel-wrapper">
                     <div class="award-track gap-2">
-                        @foreach (array_merge($award, $award) as $item)
+                        @foreach ($awards as $item)
                             <div class="award-child-1 flex gap-2">
                                 <i class="bi bi-dot w-2 pt-2"></i>
                                 <div class="text-award flex flex-col">

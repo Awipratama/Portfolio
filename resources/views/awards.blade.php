@@ -1,7 +1,8 @@
 <x-layout.app>
     <div class="card mb-4">
-        <div class="card-header">
-            <h3 class="card-title">Striped Full Width Table</h3>
+        <div class="card-header w-full d-flex flex-row justify-content-between align-items-center">
+            <h3 class="card-title">Award Page</h3>
+            <a href="{{ route('awards.create') }}" class="btn btn-primary btn-sm">+ Add Award</a>
         </div>
         <!-- /.card-header -->
         <div class="card-body p-0">
@@ -9,55 +10,38 @@
                 <thead>
                     <tr>
                         <th style="width: 10px">#</th>
-                        <th>Task</th>
-                        <th>Progress</th>
-                        <th style="width: 40px">Label</th>
+                        <th>Title</th>
+                        <th>Year</th>
+                        <th style="width: 120px">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="align-middle">
-                        <td>1.</td>
-                        <td>Update software</td>
-                        <td>
-                            <div class="progress progress-xs">
-                                <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                            </div>
-                        </td>
-                        <td><span class="badge text-bg-danger">55%</span></td>
-                    </tr>
-                    <tr class="align-middle">
-                        <td>2.</td>
-                        <td>Clean database</td>
-                        <td>
-                            <div class="progress progress-xs">
-                                <div class="progress-bar text-bg-warning" style="width: 70%"></div>
-                            </div>
-                        </td>
-                        <td><span class="badge text-bg-warning">70%</span></td>
-                    </tr>
-                    <tr class="align-middle">
-                        <td>3.</td>
-                        <td>Cron job running</td>
-                        <td>
-                            <div class="progress progress-xs progress-striped active">
-                                <div class="progress-bar text-bg-primary" style="width: 30%"></div>
-                            </div>
-                        </td>
-                        <td><span class="badge text-bg-primary">30%</span></td>
-                    </tr>
-                    <tr class="align-middle">
-                        <td>4.</td>
-                        <td>Fix and squish bugs</td>
-                        <td>
-                            <div class="progress progress-xs progress-striped active">
-                                <div class="progress-bar text-bg-success" style="width: 90%"></div>
-                            </div>
-                        </td>
-                        <td><span class="badge text-bg-success">90%</span></td>
-                    </tr>
+                    @forelse ($awards as $award)
+                        <tr class="align-middle">
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $award->title }}</td>
+                            <td>{{ $award->year }}</td>
+                            <td>
+                                <a href="{{ route('awards.edit', $award) }}" class="btn btn-warning btn-sm">Edit</a>
+                                <form action="{{ route('awards.destroy', $award) }}" method="POST" class="d-inline">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-danger btn-sm"
+                                        onclick="return confirm('Are you sure to delete this award?')">
+                                        Delete
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    @empty
+                        <tr>
+                            <td colspan="4" class="text-center">No awards found</td>
+                        </tr>
+                    @endforelse
                 </tbody>
             </table>
         </div>
         <!-- /.card-body -->
     </div>
+
 </x-layout.app>

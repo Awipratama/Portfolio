@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\AwardController;
 
 Route::get('/', [PortfolioController::class, 'index']);
 
@@ -15,4 +16,5 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::view('/dashboardv1', 'dashboardv1')->name('dashboardv1');
     Route::view('/dashboardv3', 'dashboardv3')->name('dashboardv3');
     Route::view('/awards', 'awards')->name('awards');
+    Route::resource('awards', AwardController::class);
 });
