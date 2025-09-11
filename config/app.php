@@ -123,4 +123,7 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    // Admin Register
+    'admin' => \App\Http\Middleware\AdminMiddleware::class,
+
 ];
