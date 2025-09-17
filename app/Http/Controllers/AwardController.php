@@ -27,29 +27,29 @@ class AwardController extends Controller
 
         Awards::create($request->only('title', 'year'));
 
-        return redirect()->route('awards')->with('success', 'Award added successfully!');
+        return redirect()->route('awards.index')->with('success', 'Award added successfully!');
     }
 
-    public function edit(Award $awards)
+    public function edit(Awards $award)
     {
         return view('awards.edit', compact('award'));
     }
 
-    public function update(Request $request, Award $awards)
+    public function update(Request $request, Awards $award)
     {
         $request->validate([
             'title' => 'required',
             'year' => 'required|digits:4|integer',
         ]);
 
-        $awards->update($request->only('title', 'year'));
+        $award->update($request->only('title', 'year'));
 
-        return redirect()->route('awards')->with('success', 'Award updated!');
+        return redirect()->route('awards.index')->with('success', 'Award updated!');
     }
 
-    public function destroy(Award $awards)
+    public function destroy(Awards $award)
     {
-        $awards->delete();
-        return redirect()->route('awards')->with('success', 'Award deleted!');
+        $award->delete();
+        return redirect()->route('awards.index')->with('success', 'Award deleted!');
     }
 }
