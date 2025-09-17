@@ -15,6 +15,5 @@ Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 Route::middleware('auth')->prefix('admin')->group(function () {
     Route::view('/dashboardv1', 'dashboardv1')->name('dashboardv1');
     Route::view('/dashboardv3', 'dashboardv3')->name('dashboardv3');
-    Route::view('/awards', 'awards')->name('awards');
     Route::resource('awards', AwardController::class);
 });

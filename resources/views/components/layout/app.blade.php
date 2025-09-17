@@ -281,6 +281,21 @@
         const sparkline3 = new ApexCharts(document.querySelector('#sparkline-3'), option_sparkline3);
         sparkline3.render();
     </script>
+
+    {{-- Award Update Handler Script --}}
+    <script>
+        function openUpdateModal(id, title, year) {
+            let modal = document.getElementById('updateAwardModal');
+            let form = document.getElementById('updateAwardForm');
+
+            form.action = `/admin/awards/${id}`;
+
+            document.getElementById('update-title').value = title;
+            document.getElementById('update-year').value = year;
+
+            modal.classList.remove('hidden');
+        }
+    </script>
     <!--end::Script-->
 </body>
 <!--end::Body-->
