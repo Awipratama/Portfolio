@@ -62,50 +62,49 @@
                 </div>
                 <div class="about-child2 py-4 px-6 rounded-xl">
                     <h3 class="font-semibold mb-2 text-[20px]">My Programming Skills</h2>
-                    <div class="heading-about-child flex items-center gap-2 flex-wrap">
-                        <!-- JavaScript -->
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                            alt="JavaScript" class="w-16 h-16" />
+                        <div class="heading-about-child flex items-center gap-2 flex-wrap">
+                            <!-- JavaScript -->
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                alt="JavaScript" class="w-16 h-16" />
 
-                        <!-- React -->
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                            alt="React" class="w-16 h-16" />
+                            <!-- React -->
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                alt="React" class="w-16 h-16" />
 
-                        <!-- Vue -->
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
-                            alt="Vue" class="w-16 h-16" />
+                            <!-- Vue -->
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                                alt="Vue" class="w-16 h-16" />
 
-                        <!-- Tailwind -->
-                        <img src="{{ asset('assets/TailwindCSS.png') }}" alt="Tailwind" class="w-16 h-16" />
+                            <!-- Tailwind -->
+                            <img src="{{ asset('assets/TailwindCSS.png') }}" alt="Tailwind" class="w-16 h-16" />
 
-                        <!-- Bootstrap -->
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-                            alt="Bootstrap" class="w-16 h-16" />
+                            <!-- Bootstrap -->
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                                alt="Bootstrap" class="w-16 h-16" />
 
-                        <!-- Laravel -->
-                        <img src="{{ asset('assets/Laravel.png') }}" alt="Laravel" class="w-16 h-16" />
+                            <!-- Laravel -->
+                            <img src="{{ asset('assets/Laravel.png') }}" alt="Laravel" class="w-16 h-16" />
 
-                        <!-- PHP -->
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
-                            alt="PHP" class="w-16 h-16" />
+                            <!-- PHP -->
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                                alt="PHP" class="w-16 h-16" />
 
-                        <!-- C++ -->
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
-                            alt="C++" class="w-16 h-16" />
+                            <!-- C++ -->
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                                alt="C++" class="w-16 h-16" />
 
-                        <img src="{{ asset('assets/Ubuntu.png') }}"
-                            alt="Linux" class="w-16 h-16" />
+                            <img src="{{ asset('assets/Ubuntu.png') }}" alt="Linux" class="w-16 h-16" />
 
-                        <img src="https://www.vectorlogo.zone/logos/mariadb/mariadb-icon.svg" alt="Mariadb"
-                            class="w-16 h-16" />
+                            <img src="https://www.vectorlogo.zone/logos/mariadb/mariadb-icon.svg" alt="Mariadb"
+                                class="w-16 h-16" />
 
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
-                            alt="MySql" class="w-16 h-16" />
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
+                                alt="MySql" class="w-16 h-16" />
 
-                        <img src="{{ asset('assets/Java.png') }}" alt="Java" class="w-16 h-16" />
+                            <img src="{{ asset('assets/Java.png') }}" alt="Java" class="w-16 h-16" />
 
-                        <img src="{{ asset('assets/WordPress.png') }}" alt="Java" class="w-16 h-16" />
-                    </div>
+                            <img src="{{ asset('assets/WordPress.png') }}" alt="Java" class="w-16 h-16" />
+                        </div>
                 </div>
             </div>
         </div>
@@ -127,11 +126,53 @@
                         </div>
                     @endforeach
                 </div>
-
-                <!-- Navigation & Pagination -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
             </div>
         </div>
+        <div x-data="{
+            current: 0,
+            images: [
+                '{{ asset('assets/icons/js.svg') }}',
+                '{{ asset('assets/icons/react.svg') }}',
+                '{{ asset('assets/icons/vue.svg') }}',
+                '{{ asset('assets/icons/bootstrap.svg') }}',
+                '{{ asset('assets/icons/laravel.svg') }}',
+                '{{ asset('assets/icons/php.svg') }}',
+                '{{ asset('assets/icons/cpp.svg') }}',
+                '{{ asset('assets/icons/tailwind.svg') }}'
+            ]
+        }" class="relative w-full max-w-3xl mx-auto">
+
+            <!-- Carousel Wrapper -->
+            <div class="overflow-hidden">
+                <div class="flex transition-transform duration-500"
+                    :style="{ transform: `translateX(-${current * 100}%)` }">
+
+                    <!-- Each Slide (2 images per slide) -->
+                    <template
+                        x-for="(chunk, index) in images.reduce((acc, _, i, arr) => 
+                i % 2 === 0 ? [...acc, arr.slice(i, i + 2)] : acc, [])"
+                        :key="index">
+
+                        <div class="w-full flex-shrink-0 grid grid-cols-2 gap-4 p-6">
+                            <template x-for="img in chunk" :key="img">
+                                <div class="flex justify-center items-center">
+                                    <img :src="img" class="w-32 h-32 object-contain" />
+                                </div>
+                            </template>
+                        </div>
+                    </template>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <button @click="current = (current - 1 + Math.ceil(images.length / 2)) % Math.ceil(images.length / 2)"
+                class="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-full">
+                ‹
+            </button>
+            <button @click="current = (current + 1) % Math.ceil(images.length / 2)"
+                class="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-full">
+                ›
+            </button>
+        </div>
+
 </x-layout.app2>
