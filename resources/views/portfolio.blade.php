@@ -14,10 +14,10 @@
                 </p>
             </div>
             <div class="award py-4 px-4 bg-[#FAF1E6] rounded-xl shadow-lg">
-                <h2 class="text-[16px] font-semibold pb-4">
+                <h2 class="text-[16px] font-semibold pb-4 text-center">
                     Awards & Certification
                 </h2>
-                <div class="award-caraousel-wrapper">
+                <div class="award-caraousel-wrapper max-w-[205px]">
                     <div class="award-track gap-2">
                         @foreach ($awards as $item)
                             <div class="award-child-1 flex gap-2">
@@ -61,18 +61,51 @@
                     </p>
                 </div>
                 <div class="about-child2 py-4 px-6 rounded-xl">
-                    <div class="heading-about-child flex items-center gap-2">
-                        <SiDailydotdev class="text-[20px] mb-2" />
-                        <h3 class="font-semibold mb-2">
-                            IoT Developer
-                        </h3>
+                    <h3 class="font-semibold mb-2 text-[20px]">My Programming Skills</h2>
+                    <div class="heading-about-child flex items-center gap-2 flex-wrap">
+                        <!-- JavaScript -->
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JavaScript" class="w-16 h-16" />
+
+                        <!-- React -->
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                            alt="React" class="w-16 h-16" />
+
+                        <!-- Vue -->
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                            alt="Vue" class="w-16 h-16" />
+
+                        <!-- Tailwind -->
+                        <img src="{{ asset('assets/TailwindCSS.png') }}" alt="Tailwind" class="w-16 h-16" />
+
+                        <!-- Bootstrap -->
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                            alt="Bootstrap" class="w-16 h-16" />
+
+                        <!-- Laravel -->
+                        <img src="{{ asset('assets/Laravel.png') }}" alt="Laravel" class="w-16 h-16" />
+
+                        <!-- PHP -->
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                            alt="PHP" class="w-16 h-16" />
+
+                        <!-- C++ -->
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                            alt="C++" class="w-16 h-16" />
+
+                        <img src="{{ asset('assets/Ubuntu.png') }}"
+                            alt="Linux" class="w-16 h-16" />
+
+                        <img src="https://www.vectorlogo.zone/logos/mariadb/mariadb-icon.svg" alt="Mariadb"
+                            class="w-16 h-16" />
+
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
+                            alt="MySql" class="w-16 h-16" />
+
+                        <img src="{{ asset('assets/Java.png') }}" alt="Java" class="w-16 h-16" />
+
+                        <img src="{{ asset('assets/WordPress.png') }}" alt="Java" class="w-16 h-16" />
                     </div>
-                    <p class="text-justify">
-                        IoT Developer experienced with ESP32, C programming,
-                        and Android apps via MIT App Inventor. Built RC
-                        cars, automated systems, and smart controllers using
-                        voice and image recognition.
-                    </p>
                 </div>
             </div>
         </div>
